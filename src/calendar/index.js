@@ -291,14 +291,14 @@ class Calendar extends Component {
         minDateYear <= curDateYear && minDateMonth < curDateMonth
       */
       hideLeftArrow =
-        this.props.minMonthDate.getFullYear() <=
+        this.props.minMonthDate.getFullYear() >=
           this.state.currentMonth.getFullYear() &&
-        this.props.minMonthDate.getMonth() <=
+        this.props.minMonthDate.getMonth() >=
           this.state.currentMonth.getMonth();
       hideRightArrow =
-        this.props.maxMonthDate.getFullYear() >=
+        this.props.maxMonthDate.getFullYear() <=
           this.state.currentMonth.getFullYear() &&
-        this.props.maxMonthDate.getMonth() >=
+        this.props.maxMonthDate.getMonth() <=
           this.state.currentMonth.getMonth();
     }
 
